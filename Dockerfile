@@ -1,8 +1,9 @@
 # ===== Build stage =====
 FROM gradle:8.5.0-jdk17 AS builder
-COPY --chown=gradle:gradle . /home/gradle/project
+COPY . /home/gradle/project
 WORKDIR /home/gradle/project
-RUN gradle bootJar --no-daemon
+RUN chmod +x ./gradlew
+RUN ./gradlew clean bootJar --no-daemon
 
 # ===== Run stage =====
 FROM eclipse-temurin:17-jre

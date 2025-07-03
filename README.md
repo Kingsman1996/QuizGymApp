@@ -15,7 +15,7 @@ QuizGymApp là một nền tảng thi trắc nghiệm trực tuyến, hỗ trợ
 | Java 17              | Next.js 14 (App Router) |
 | Spring Boot          | React 18           |
 | Spring Security + JWT| TailwindCSS        |
-| WebSocket            | TypeScript         |
+| WebSocket            | JavaScript         |
 | JPA + MySQL          | Formik, Axios      |
 
 ---

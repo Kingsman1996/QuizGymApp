@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 @Entity
 @Setter
 @Getter
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,9 +35,9 @@ public class User {
     @Column
     private LocalDateTime lastLogin;
 
-    @Column(nullable = true, length = 255)
+    @Column
     private String avatar;
 
-    @Column(nullable = true, unique = true)
+    @Column(unique = true)
     private String googleId; // Thêm trường này để lưu ID từ Google
 }
